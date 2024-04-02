@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head> <!-- MetaData -->
+        <meta charset="UTF-8">
+        <title>Balise a</title>
+        <link rel="icon" type="img/x-icon" href="../img/icone.png"/>
+        <!-- balises meta à compléter -->
+        <meta name="author" content="gcadet"/>
+        <link rel="stylesheet" type="text/css" href="../css/default.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/global.css"/>
+        <style>
+            a{display: block;}
+            .error{color: red; font-weight: bold;}
+        </style>
+    </head>
+
+    <body>
+        <h2>La balise </h2>
+        <a href="15-Couleurs.html">Lien vers une page</a>
+        <a href="#">Lien mort</a>
+        <a href="15-Couleurs.html" target="_self">Lien ouvert dans le même onglet (par défaut)</a>
+        <a href="https://www.google.com" target="_blank">Lien ouvert dans un nouvel onglet: target=_blank</a>
+        <a href="mailto:gcadet6236@hotmail.fr">Mailto</a>
+        <a href="../img/1548460.jpg" target="_blank">Lien vers une image</a>
+        <a href="../documents/A_Night_in_Tunisia.pdf" target="_blank">Lien vers un pdf</a>
+
+        <p class="error">Pour une raison inconnue, l'attribut download ne fonctionne pas</p>
+        <a href="../documents/A_Night_in_Tunisia.pdf" target="_blank" download>Lien vers un pdf: forcer le téléchargement</a>
+        <a href="../documents/A_Night_in_Tunisia.pdf" target="_blank" download="A night in Tunisia.jpg">Lien vers un pdf: forcer le nom du fichier téléchargé</a>
+        <a href="../documents/textFile.txt" target="_blank" download="myTextFile.txt">Lien vers un .txt: forcer le nom du fichier téléchargé</a>
+        Si l'extension du fichier ne peut pas etre interprétée alors il est par défaut téléchargé.
+
+        <h1>The a download attribute</h1>
+
+        <p>Click on the image to download it:</p>
+            <a href="../img/myw3schoolsimage.jpg" download="w3logo">
+                <img src="../img/myw3schoolsimage.jpg" alt="W3Schools" width="104" height="142">
+            </a>
+
+        <p>Notice that the filename of the downloaded file will be saved as "w3logo.jpg" instead of "myw3schoolsimage.jpg".</p>
+
+        <p><b>Note:</b> The download attribute is not supported in IE or Edge (prior version 18), or in Safari (prior version 10.1).</p>
+    </body>
+
+</html>

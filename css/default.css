@@ -1,0 +1,26 @@
+/* CSS par defaut https://www.w3schools.com/cssref/css_default_values.php */
+html { display: block; } html:focus	{ outline: none; }
+head { display: none; }
+title { display: none; }
+link { display: none; }
+body { display: block; margin: 8px; } body:focus { outline: none; }
+p { 
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0; 
+}
+div { display: block; }
+a:link {
+    color: (internal value);
+    text-decoration: underline;
+    cursor: auto;
+    }
+a:visited {
+    color: (internal value);
+    text-decoration: underline;
+    cursor: auto;
+}
+a:link:active { color: (internal value);}
+a:visited:active { color: (internal value);}

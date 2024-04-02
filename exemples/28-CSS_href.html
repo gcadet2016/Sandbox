@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head> <!-- MetaData -->
+        <meta charset="UTF-8">
+        <title>href pseudo classes</title>
+        <link rel="icon" type="img/x-icon" href="../img/icone.png"/>
+        <!-- balises meta à compléter -->
+        <meta name="author" content="gcadet"/>
+        <link rel="stylesheet" type="text/css" href="../css/default.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/global.css"/>
+        <style>
+            /* Propriétés du lien au premier affichage */
+            a:link{color:red;cursor:pointer;}
+            /* Propriétés du lien après avoir été cliqué 
+             Il faut le supprimer de l'historique de navigation pour retrouver la couleur par défaut (ci-dessus) */
+            a:visited{color:green;}
+            /* Propriétés du lien au passage de la souris */
+            a:hover{color:yellow;}
+            /* Propriétés du lien lorsqu'il est sélectionné (touche tab qui sélectionne le champ suivant) */
+            a:focus{color:aqua}
+            /* Propriétés du lien lorsqu'on clique, avant de relacher la souris */
+            a:active{color:mediumpurple}
+        </style>
+    </head>
+
+    <body>
+        <a href="#">Hello world!</a>
+        <p>Effacer historique de navigation: Ctrl + Shift + suppr</p>
+        <p>ou historique de navigation edge url: edge://history/all</p>
+    </body>
+
+</html>

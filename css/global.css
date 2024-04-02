@@ -1,0 +1,56 @@
+/*
+Palette de couleurs du plus clair ou plus foncé
+Généré par https://paletton.com
+-- Primary Colors -------------------------------------------------------------------
+                #FFF8EF RGB: 255–248–239
+                #FFEACE RGB: 255–234–206
+Fond d'écran    #E9D1B1 RGB: 233–209–177
+                #E9D1B1 RGB: 204–176–139
+                #B2946B RGB: 178–148–107
+-- Tons vert ------------------------------------------------------------------------
+                #CDDCD6 RGB: 205–220–214
+                #ADD6C4 RGB: 173–214–196
+                #79A08F RGB: 121–160–143
+                #5F8C79 RGB: 95–140–121
+                #497A65 RGB: 73–122–101
+-- Tons violet ----------------------------------------------------------------------
+                #D1D1DD RGB: 181–181–216
+                #B5B5D8 RGB: 130–130–163
+                #8282A3 RGB: 104–104–143
+                #68688F RGB: 104–104–143
+                #52527D RGB: 82–82–125
+-------------------------------------------------------------------------------------
+*/
+/* CSS général du site */
+body {
+    font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+    font-weight: normal; font-stretch: normal; font-style: normal;
+    font-size: 16px; color:#52527D;
+    background-color: antiquewhite;
+}
+a:link, a:visited, a:hover, a:focus, a:active{
+    color: #52527D; text-decoration: none;cursor: pointer;
+}
+.menu{
+    font-family: cursive; font-size: 1.5em;
+    width: 80%; margin: 0 auto; /* Centré horizontalement */
+    border:#52527D 5px double; border-radius: 10px; /* Angles arrondis */
+    background-color: #D1D1DD;
+    min-width: 200px;
+}
+.nav{
+    display: inline-block; /* plus de retour à la ligne mais bloc donc on peut préciser width */
+    width: calc(100% / 6); /* 100% de l'élément pair (menu) divisé par 6 */
+    min-width: 200px;
+    border: 10px solid rgba(130,130,163,0);
+    padding: 10px;text-align: center;
+    box-sizing: border-box; /* Tenir compte du padding et de la border dans le sizing */
+    border-radius: 5px;     /* 10px = border-radius de .menu, sauf que le border fait 5px d'épaisseur donc ici il faut rectifier le border radius 
+    de l'élément inclus à l'intérieur de menu à 10 - 5 = 5 px */
+}
+.nav:hover{
+    border: 10px solid rgba(130,130,163,1);background-color: #52527D; color: #D1D1DD; font-weight: bold;
+}
+.nav:active{
+    border: 10px solid #497A65;color: #5F8C79;background-color: #CDDCD6;
+}

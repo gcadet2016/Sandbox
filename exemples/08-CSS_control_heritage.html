@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head> <!-- MetaData -->
+    <meta charset="UTF-8">
+    <title>Titre de la page</title>
+    <style>
+        body{color:red;}
+        .classVert{color:green;}
+    </style>
+</head>
+
+<body>
+    <a href="#">Lien mort</a>
+    <p>Par defaut <a href="#">Balise a</a> un lien</p>
+    <p>Activation de l'héritage sur 'color' <a style="color:inherit;" href="#">Balise a</a> un lien</p>
+    <p>Activation de l'héritage de la valeur par defaut dans le browser sur 'color' <a style="color:initial;" href="#">Balise a</a> un lien</p>
+    <p>Activation de l'héritage de style sinon 'initial' sur 'color' <a style="color:unset;" href="#">Balise a</a> un lien</p>
+    <p>
+        <a class="classVert" href="#">Balise a</a> un lien<br/>
+        <a class="classVert" style="color:revert;" href="#">Balise a</a> un lien<br/>
+    </p>
+</body>
+
+</html>

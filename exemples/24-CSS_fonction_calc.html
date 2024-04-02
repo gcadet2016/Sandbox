@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head> <!-- MetaData -->
+        <meta charset="UTF-8">
+        <title>LA fcontion calc()</title>
+        <link rel="icon" type="img/x-icon" href="../img/icone.png"/>
+        <!-- balises meta à compléter -->
+        <meta name="author" content="gcadet"/>
+        <link rel="stylesheet" type="text/css" href="../css/default.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/global.css"/>
+        <style>
+            .moncontenu{ width: 1024px; margin: auto;}
+            .header, .footer{height: 150px;}
+            .header{background-color: red;}
+            .footer{ background-color: yellow;}
+            .main{width: 50%;display: inline-block;padding: 10px;box-sizing: border-box;
+                /* vh = view height
+                    150px = taille header et footer
+                    Attention les espaces dans le calculs sont importants : 100vh - 100px
+                */
+                height: calc(100vh - (150px *2));    
+            }
+            .main1{background-color: green;}
+            .main2{background-color: purple; color: white;}
+        </style>
+    </head>
+
+    <body>
+        <div class="moncontenu">
+            <div class="header">HEADER</div>
+            <div class="main main1">vh = view height, 150px = taille header et footer<br/>Ligne vide<br/>Ligne vide</div><div class="main main2">absence de saut de ligne et inline-block<br/>Sauf que si je n'ai pas le même nombre de lignes de text, c'est le bordel</div>
+            <div class="footer">FOOTER</div>
+        </div>
+    </body>
+
+</html>
