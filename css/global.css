@@ -40,7 +40,7 @@ a:link, a:visited, a:hover, a:focus, a:active{
 }
 .nav{
     display: inline-block; /* plus de retour à la ligne mais bloc donc on peut préciser width */
-    width: calc(100% / 6); /* 100% de l'élément pair (menu) divisé par 6 */
+    width: calc(100% / 7); /* 100% de l'élément pair (menu) divisé par 6 */
     min-width: 200px;
     border: 10px solid rgba(130,130,163,0);
     padding: 10px;text-align: center;
