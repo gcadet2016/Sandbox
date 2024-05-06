@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head> <!-- MetaData -->
+        <meta charset="UTF-8">
+        <title>Titre de la page</title>
+        <link rel="icon" type="img/x-icon" href="../../img/icone.png"/>
+        <!-- balises meta à compléter -->
+        <meta name="author" content="gcadet"/>
+        <link rel="stylesheet" type="text/css" href="../../css/default.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/global.css"/>
+
+    </head>
+
+    <body>
+        <form>
+            <fieldset>
+                <legend>Fruit juice size</legend>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form">Article tuto</a>
+                <p>
+                    <input type="radio" name="size" id="size_1" value="small" />
+                    <label for="size_1">Small</label>
+                </p>
+                <p>
+                    <input type="radio" name="size" id="size_2" value="medium" />
+                    <label for="size_2">Medium</label>
+                </p>
+                <p>
+                    <input type="radio" name="size" id="size_3" value="large" />
+                    <label for="size_3">Large</label>
+                </p>
+                <legend>Angle caméra</legend>
+                <p>
+                    <input type="range" id="angleCam" min="0" max="180" value="90" step="10" onchange="sendAngle()">
+                    <label for="angleCam">Angle caméra (servo)</label>
+                    <p>Value: <output id="angleValue">90</output></p>
+                </p>
+                <p>
+                    <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry" />
+                    <label for="taste_1">I like cherry</label>
+                  </p>
+                  <p>
+                    <input type="checkbox" id="taste_2" name="taste_banana" value="banana" />
+                    <label for="taste_2">I like banana</label>
+                  </p>
+            </fieldset>
+          </form>
+    </body>
+        <script>
+            const value = document.querySelector("#angleValue");
+            const input = document.querySelector("#angleCam");
+            value.textContent = input.value;
+            input.addEventListener("input", (event) => {
+                value.textContent = event.target.value;
+            });
+
+            function sendAngle(){
+                //publishMqtt("Lego/")
+            }
+        </script>
+</html>
