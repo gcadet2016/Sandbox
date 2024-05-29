@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head> <!-- MetaData -->
+        <meta charset="UTF-8">
+        <title>Titre de la page</title>
+        <link rel="icon" type="img/x-icon" href="../img/icone.png"/>
+        <!-- balises meta à compléter -->
+        <meta name="author" content="gcadet"/>
+        <link rel="stylesheet" type="text/css" href="../css/default.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/global.css"/>
+        <style>
+            #myCanvas {
+                rotate: 0deg;
+                /* position: absolute;
+                top: 40px;
+                left: 60px; */
+                border-style:dashed;
+                border-width: 1px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>
+            canvas
+        </h1>
+        <canvas id="myCanvas" width="200" height="200"></canvas>
+        <div>
+            <input type="range" id="rAngle" name="rAngle" min="-90" max="90" value="0" step="5" />
+            <label for="rAngle">Orientation</label>
+        </div>
+        <p>Value rAngle: <output id="valueAngle"></output></p>
+    </body>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.moveTo(25, 25);
+        ctx.lineTo(105, 25);
+        ctx.lineTo(25, 105);
+        ctx.fillStyle = "red";
+        ctx.fill();
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0, 0, 25, 25);
+
+        ctx.beginPath();
+        ctx.moveTo(50, 50);
+        ctx.lineTo(180, 100);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = "brown";
+        ctx.lineCap = "round";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = "orange";
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.strokeStyle = "rgb(100 33 189 / 50%)";
+        ctx.lineWidth = 5;
+        ctx.strokeRect(10,10, 100,100);
+
+        ctx.beginPath();
+        ctx.strokeStyle = "green";
+        ctx.lineWidth = 1;
+        // Set start-point
+        ctx.moveTo(20,20);
+        // Set sub-points
+        ctx.lineTo(100,20);
+        ctx.lineTo(175,100);
+        ctx.lineTo(20,100);
+        // Set end-point
+        ctx.lineTo(20,20);
+
+        // Stroke it (do the drawing)
+        ctx.stroke();
+
+
+        // Input Range
+        //const canvas = document.getElementById('myCanvas');  déjà dans le code ci-dessus
+        const valueAngle = document.querySelector("#valueAngle");
+        const rangeAngle = document.querySelector("#rAngle");
+        rangeAngle.addEventListener("input", (event) => {
+            valueAngle.textContent = event.target.value;
+            canvas.style.rotate = `${event.target.value}deg`;
+        });
+    </script>
+</html>
