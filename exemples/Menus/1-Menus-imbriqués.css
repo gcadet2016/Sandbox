@@ -1,0 +1,43 @@
+.main-menu .sous-menu {
+    padding: 0;
+    margin: 0;
+    background-color: #FF0;
+    list-style: none;
+}
+
+.main-menu li {
+    display: table-cell;  /* Let the element behave like a <td> element */
+}
+
+.main-menu li a {
+    color: red;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+}
+
+.main-menu li a:hover{
+    color: black;
+    text-decoration: none;
+    background-color: #f90;
+}
+
+.main-menu li:first-child a {
+    border-left: 1px solid #4b1515;
+}
+
+.sous-menu {
+    position: absolute; /* évite que l'apparition du menu décale le texte de la page vers le bas pour laisser la lace au menu. 
+                            Avec "abolute", le menu se supperpose au contenu de la page */
+    display: none;
+}
+
+.sous-menu li {
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+li:hover .sous-menu {
+    display:block;
+}

@@ -1,0 +1,78 @@
+body {
+    background-color: #e5ccb2;
+}
+.majuscule {
+    text-transform: uppercase;
+}
+.obligatoire {
+    color: red;
+}
+fieldset {
+    border: #8c98a1 double 5px;
+    width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+}
+legend {
+    color: #4b6375;
+    font: 24px cursive;
+    font-style: italic;
+    padding: 0 15px 0 15px;
+}
+.ligne_2_parties {
+    width: 100%;
+    line-height: 2em;
+    clear: both;            /* parce-qu'on fait un 'float: left;' et un 'float: right;' ci-dessous */
+}
+.ligne_2_parties .partie_gauche {
+    width: 30%; float: left;
+}
+.ligne_2_parties .partie_droite {
+    width: 70%; float: right;
+}
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    line-height: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: #8c98a1 solid 1px;
+    vertical-align: text-top;       /* Pour aligner le label avec la première ligne de textarea */
+}
+textarea {
+    resize: none;
+}
+
+/* Halo bleu qui apparait autour du champ de saisie au moment ou il a le focus */
+
+input[type="text"]:invalid, input[type="email"]:invalid, select:invalid, textarea:invalid {
+    border: red solid 3px;
+}
+/* la partie focus est placée après la partie invalid. Conséquence: lorsqu'on sélectionne le champ, le halo bleu remplace le cadre rouge */
+input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
+    border-color: rgba(102,175,233,1);
+    box-shadow: 0 0 8px rgba(102,175,233,0.6);
+    outline: 0;     /* supprime une ligne noire qui entoure l'input lorsqu'il a le focus */
+}
+.button {
+    line-height: 1em;
+    background-color: #fffefd;
+    color: #4b6375;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0; padding: 0; border: none; box-sizing: border-box;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #8c98a1;
+    border-color: #4b6375;
+    color: #fffefd;
+}

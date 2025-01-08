@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <title>Sémantique</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="img/x-icon" href="../img/icone.png"/>
+        <!-- balises meta à compléter -->
+        <meta name="author" content="gcadet"/>
+        <link rel="stylesheet" type="text/css" href="../css/default.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/global.css"/>
+        <style>
+            section,article,header,nav,aside,footer{
+                border: 1px solid black;
+            }
+            section {
+                background-color: lightgray;
+            }
+            header {
+                background-color: red;
+            }
+            nav {
+                background-color: greenyellow;
+            }
+            aside {
+                background-color: lightblue;
+            }
+            footer {
+                background-color: gold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <p>Header</p>
+            </header>
+            <nav>
+                <p>Menu</p>
+            </nav>
+            <main>
+                <!--Larticle ci-dessous et un 'module'-->
+                <article class="main-article">L'article est un "module" et peut posséder header, forter etc...
+                    <header>
+                        <h1>Titre de l'article</h1>
+                        <div class="metas">
+                            <span class="auteur">Auteur article</span>
+                            <time datetime="2023-04-25">25 avril 2023</time>
+                        </div>
+                    </header>
+                    <!--La section ci-dessous et un 'module'-->
+                    <section class="les-plus">
+                        <header>les plus</header>
+                        <article class="sec1-article">
+                            <h1>Zoom</h1>
+                            <figure>
+                                <img src="image.png" alt="zomm" width="250" height="250">
+                            </figure>
+                            <p>Dénicher les bonnes opportunités</p>
+                        </article>
+                        <article class="sec1-article">
+                            <h1>Infographie</h1>
+                            <p>Paragraphe</p>
+                        </article>
+                    </section>
+                    <section>
+                        <h2>section 2</h2>
+                        <p>Paragraphe</p>
+                    </section>
+                    <section>
+                        <h2>section 3</h2>
+                        <p>Paragraphe</p>
+                    </section>
+                    <footer>
+                        <div class="container-tags">
+                            <span class="tags" href="#">Chien, poil</span>
+                            <span class="categories" href="#">Animaux, soins</span>
+                        </div>
+                    </footer>
+                </article>
+                <aside>aside</aside>
+            </main>
+            <footer>footer</footer>
+        </div>
+    </body>
+
+</html>
+

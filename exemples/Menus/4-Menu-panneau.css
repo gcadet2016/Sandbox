@@ -1,0 +1,128 @@
+/* header */
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template: 150px / 180px 1fr;
+    align-items: end;
+}
+
+header .logo {
+    grid-column: 1 / 2;
+    margin: 0;
+    padding: 0;
+}
+header .title {
+    background-color: rgb(87 121 156);
+    grid-column: 2 / -1;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 0.5em;
+    margin-left: 50px;
+}
+
+
+/* Menu 1er niveau */
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-panneau {
+    padding: 0;
+    margin: 0;
+    margin-top: 55px;
+    background-color: #34495e;
+    position: relative;
+}
+
+.item {
+    display: table-cell;
+}
+
+.item > a {
+    color:#c4e9f5;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+}
+
+.item a:hover {
+    color: black;
+    text-decoration: none;
+    background-color: #56799c;
+}
+
+/* Panneau et images */
+
+.panneau {
+    background-color: #ededed;
+    padding: 2em;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.item:hover .panneau {
+    display: block;
+}
+
+.img-fl-l {
+    float:left;
+    margin-right: 20px;
+}
+
+.clearfix-overflow {
+    overflow: hidden;       /* Attention, après le flottement (float: left) de ".panneau figure" il faut mettre fin à celle-ci, on va ajouter overflow:hidden sur le parent par la classe clearfix-overflow*/
+}
+
+/* Les sous-menus */
+
+.container-panneau-menu {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 auto;
+    margin: 0 20px 0 0;
+}
+
+.container-panneau-menu h3 {
+    color: #8b2040;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.container-panneau-menu a {
+    display: block;
+    color: #2c3e50;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.container-panneau-menu a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+    color: #2b2040;
+}
+
+/* contenu de la page */
+
+.mainPage {
+    display: grid;
+    background-color: rgb(152 166 165);
+    grid-template: 300px 300px / 1fr 1fr 1fr 1fr;
+}
+
+.block {
+    grid-template: auto;
+    background-color: rgb(126 140 141);
+    margin: 20px;
+    border: 1px solid black;
+}

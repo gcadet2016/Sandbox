@@ -1,0 +1,45 @@
+.main{
+    width:800px;
+    margin: 20px auto;
+    border: 10px #55557F double;
+    border-radius: 10px;
+    padding: 10px;
+}
+/* On cible la balise */
+.main h1{
+    text-align: center;
+    color:#55557F;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 2px white, 5px 5px 0.2em #4C7D68, -5px -5px 0em #93ABA1;
+}
+/* supprimer le retour à la ligne de l'adresse = changer de display:block à display:inline */
+address{ 
+    display: inline;
+}
+.biographie .oeuvres {
+    text-align: left;
+    column-rule: 2px solid #55557F;
+    column-gap: 20px;
+}
+.biographie{
+    column-count: 3;
+}
+.oeuvres{
+    column-count: 4;
+}
+/*  Etaler le tritre sur les colonnes
+    On cible la balise h2 enfant direct de la classe .biographie.
+    https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/Selectors#combinateurs
+*/
+.biographie > h2, .oeuvres > h2 {
+    column-span: all;
+    border-bottom: 2px solid #55557F;
+}
+/*  Etaler le tritre sur les colonnes
+    On cible toutes les balises cite qui se trouvent à l'intérieur de la classe .oeuvres. */
+.oeuvres cite{
+    display: block;
+    border-bottom: 1px solid #55557F;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <title>Titre de la page</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="img/x-icon" href="../img/icone.png"/>
+        <!-- balises meta à compléter -->
+        <meta name="author" content="gcadet"/>
+        <link rel="stylesheet" type="text/css" href="../css/default.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/global.css"/>
+    </head>
+
+    <body>
+        <style>
+
+
+            div.tabs { z-index: 0; line-height: 1em; min-height: 150px; position: relative; }
+            div.tabs > div > a { background: #ccc; color: black; padding: 0.3em; text-decoration: none;}
+            div.tabs > div > div {background: #ccc; color: black; padding: 1em;
+                                position: absolute; left:0; right:0; bottom:0; top: 1.3em; z-index: -2;
+            }
+            /* default display - Ne fonctionne pas
+            div.tabs > div:nth-child(1) > div { z-index: -1;}
+            div.tabs > div:nth-child(1) > a {background: #ccc;}*/
+
+            div.tabs > div{display: inline;}
+            div.tabs > div:target > div { z-index: -1;}             /* Affiche 'contenu de tab x' */
+            div.tabs > div:not(:target) > a { background: #999;}  /* grise les tabs non actives */ 
+        </style>
+        <div class="tabs">
+            <div id="tab1"><a href="#tab1">Tab 1</a><div>Contenu de tab 1</div></div>
+            <div id="tab2"><a href="#tab2">Tab 2</a><div>Contenu de tab 2</div></div>
+            <div id="tab3"><a href="#tab3">Tab 3</a><div>Contenu de tab 3</div></div>
+            <div id="tab4"><a href="#tab4">Tab 4</a><div>Contenu de tab 4</div></div>
+        </div>
+    </body>
+
+</html>

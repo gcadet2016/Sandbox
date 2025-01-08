@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head> <!-- MetaData -->
+        <meta charset="UTF-8">
+        <title>Width & height</title>
+        <link rel="icon" type="img/x-icon" href="../img/icone.png"/>
+        <!-- balises meta à compléter -->
+        <meta name="author" content="gcadet"/>
+        <link rel="stylesheet" type="text/css" href="../css/default.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/global.css"/>
+        <style>
+            #div1 { background-color: aqua; width: 150px; height: 150px;}
+            #span1 { background-color: darkgray; width: 150px; height: 150px;}
+            #span2 { background-color: red; width: 150px; height: 150px; display: block;}
+            #div2 { background-color: cadetblue; width: 600px; height: 200px;}
+            #div3 { background-color: yellowgreen; width: 25%;}
+            #div4 { background-color: darkcyan; width: 100%;}
+            #div5 { background-color: blueviolet; width: 100vw;}
+            #div6 { background-color: coral; height: 2em;}
+            #div7 { background-color: darkkhaki; height: 2em; font-size: 0.5em;}
+        </style>
+    </head>
+
+    <body>
+        <div id="div1">
+            width et height n'affecte que les éléments type block. <br/>
+        </div>
+        <span id="span1">Cet élément span est du type inline</span>
+        <span id="span2">Cet élément span est du type block</span>
+        <div id="div2">
+            width: 600px Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            <div id="div3">25% de l'élément père</div>
+            <div id="div3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        </div>
+        <div id="div4">
+            width: 100% soit 100% de la largeur de la fenêtre du navigateur
+            <div id="div3">25% de l'élément père</div>
+            <div id="div3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        </div>
+        <div id="div5">
+            width: 100vw soit 100% de la largeur de mon écran. Les marges s'ajoutent à cette largeur. donc pour faire 100% de l'écran sans ascenseur, il faut des marges à 0
+            <div id="div3">25% de l'élément père</div>
+            <div id="div3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        </div>
+        <div id="div6">hight: 2em soit 2 fois de la taille de la police de caractères.</div>    
+        <div id="div7">
+            height: 2em; font-size: 0.5em;
+        </div>   
+        <div id="div6">
+            hight: 2em soit 2 fois de la taille de la police de caractères.
+            <div id="div3">25% de l'élément père</div>
+            <div id="div3">Et bien oui ça dépasse car hight du parent est juste trop petit</div>
+        </div>    
+    </body>
+
+</html>

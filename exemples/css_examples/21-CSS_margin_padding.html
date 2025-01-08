@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head> <!-- MetaData -->
+        <meta charset="UTF-8">
+        <title>Margin & padding</title>
+        <link rel="icon" type="img/x-icon" href="../img/icone.png"/>
+        <!-- balises meta à compléter -->
+        <meta name="author" content="gcadet"/>
+        <link rel="stylesheet" type="text/css" href="../css/default.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/global.css"/>
+        <style>
+            #div1 { background-color: aqua;}
+            #div2 { background-color: lightgreen; margin: 15px}
+            #span1 { margin: 15px}
+            #div3 { 
+                background-color: violet;
+                margin-top: 50px;
+                margin-left: 20px;
+                margin-bottom: 15px;
+                margin-right: 20px;
+            }
+            #div4 { background-color: cornflowerblue; margin: 15px 50px}
+            #div5 { background-color: darkcyan; margin: 15px 50px 20px 5px}
+            #div6 { background-color: yellow; padding: 15px}
+            #div7 { background-color: darkgoldenrod; padding: 1em; font-size: 30px;}
+            #div8 { background-color: gold; margin: auto; width:500px}
+            #div9 { background-color: greenyellow; margin: auto; padding: 2em; font-size: 30px; width:500px}
+        </style>
+    </head>
+
+    <body>
+        <h2>Utiliser 'inspect' pour visualiser les résultats dans le debugger</h2>
+        <div id="div1">Marges par défaut = marge du père: body définie dans default.css</div>
+        <div id="div2">margin: 15px   s'applique sur les 4 cotés - S'ajoute à la marge de l'élément père: body</div>
+        <div id="div2">Lorem ipsum dolor <span id="span1">margin du span</span> <b>ne s'applique que sur les cotés</b></div>
+        <div id="div3">Préciser les 4 marges avec margin-top, margin-left...</div>
+        <div id="div4">margin: 15px 50px soit le sens des aiguilles d'une montre en partant de midi: top=15, right=50, bottom=15, left=50 </div>
+        <div id="div5">margin: 15px 50px 20px 5px   soit le sens des aiguilles d'une montre en partant de midi: top, right, bottom, left</div>
+
+        <div id="div6">padding: 15px   marge interne à l'élémént, s'applique sur les 4 cotés</div>
+        <div id="div7">padding: 1em   marge interne proportionnelle à la taille de la police (soit 30px)</div>
+        <div id="div8">margin: auto   l'élement sera centré au milieu de la page, mais il faut préciser l'attribut width</div>
+        <div id="div9">margin, width, padding etc...</div>
+        <p>Note: lorsqu'on utilise width et height, padding et border ne sont pas pris en compte dans la définition de cette taille</p>
+    </body>
+
+</html>

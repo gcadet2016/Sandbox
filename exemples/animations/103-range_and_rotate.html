@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head> <!-- MetaData -->
+    <meta charset="UTF-8">
+    <title>Titre de la page</title>
+    <link rel="icon" type="img/x-icon" href="../../img/icone.png" />
+    <!-- balises meta à compléter -->
+    <meta name="author" content="gcadet" />
+    <link rel="stylesheet" type="text/css" href="../../css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/global.css" />
+</head>
+
+<style>
+    div.c1 {
+        height: 50px;
+        width: 50px;
+        background-color: red;
+        rotate: 30deg;
+        position: absolute;
+        top: 40px;
+        left: 30px;
+    }
+
+    div.c2 {
+        height: 50px;
+        width: 50px;
+        background-color: lime;
+        rotate: -30deg;
+        position: absolute;
+        top: 40px;
+        left: 30px;
+    }
+</style>
+</head>
+
+<body>
+
+    <h3>Rotate property</h3>
+    <div class="c1" id="c1">Hello</div>
+    <div class="c2" id="c2">Hello</div>
+    <br>
+    <p>Rotates div element 30 degrees clockwise around z-axis.</p>
+    <p>Try to change rotate value to -30 degrees and see what happens.</p>
+    <div>
+        <input type="range" id="cRouge" name="cRouge" min="-90" max="+90" value="0" step="5" />
+        <label for="cRouge">Carré rouge</label>
+    </div>
+
+    <div>
+        <input type="range" id="cVert" name="cVert" min="-90" max="90" value="0" step="5" />
+        <label for="cVert">Carré vert</label>
+    </div>
+    <p>Value cRouge: <output id="valueCR"></output></p>
+    <p>Value cVert: <output id="valueCV"></output></p>
+</body>
+<script>
+    const cRouge = document.getElementById('c1');
+    const cVert = document.getElementById('c2');
+    const valueCR = document.querySelector("#valueCR");
+    const valueCV = document.querySelector("#valueCV");
+    const inputCR = document.querySelector("#cRouge");
+    const inputCV = document.querySelector("#cVert");
+    valueCR.textContent = inputCR.value;
+    valueCV.textContent = inputCV.value;
+    inputCR.addEventListener("input", (event) => {
+        valueCR.textContent = event.target.value;
+        cRouge.style.rotate = `${event.target.value}deg`;
+    });
+    inputCV.addEventListener("input", (event) => {
+        valueCV.textContent = event.target.value;
+        cVert.style.rotate = `${event.target.value}deg`;
+    });
+</script>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr" id="home">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page avec Menu Fixe</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #ea5757;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        main {
+            margin-top: 60px;
+            /* position: absolute; top: 60px; */
+        } 
+        .contenu {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Accueil</a>
+            <a href="#about">À propos</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="mainContent">
+            <h1>Bienvenue sur notre site</h1>
+            <article class="contenu" id="about">
+                <h2>About</h2>
+                <p>Ceci est un exemple d'article situé en dessous du header fixe. 
+                    Vous pouvez ajouter autant de contenu que vous le souhaitez ici.<br/>
+                    <a href="../Menus/10-Menu_rétractable.html">Meilleure solution ici</a>
+                </p>
+            </article>
+            <article class="contenu" id="services">
+                <h2>Service</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua. Nunc sed augue lacus viverra vitae congue eu. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. 
+                Faucibus ornare suspendisse sed nisi. Massa id neque aliquam vestibulum morbi blandit cursus. Laoreet sit amet cursus sit. 
+                Convallis aenean et tortor at risus viverra adipiscing at in. Cursus eget nunc scelerisque viverra mauris in aliquam sem 
+                fringilla. Pharetra vel turpis nunc eget lorem dolor sed viverra. Turpis tincidunt id aliquet risus feugiat in ante metus 
+                dictum. Auctor augue mauris augue neque. Id aliquet lectus proin nibh nisl condimentum id. Elementum facilisis leo vel 
+                fringilla est. Consequat ac felis donec et odio pellentesque. Diam ut venenatis tellus in metus vulputate. Netus et 
+                malesuada fames ac turpis egestas sed tempus urna. Elementum integer enim neque volutpat ac tincidunt vitae. Purus 
+                viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Et egestas quis ipsum suspendisse ultrices.
+                </p>
+            </article>
+            <article class="contenu" id="contact">
+                <h2>Contact</h2>
+                <p>Sed vulputate purus; egestas metus metus venenatis lobortis. 
+                    Duis dignissim class ultrices porttitor natoque interdum elementum. 
+                    Maximus semper diam fames quisque tristique vivamus. Augue mi phasellus enim lacus molestie. 
+                    Ipsum aptent nibh id ut ut ut cras leo. Hac morbi himenaeos platea mauris amet. 
+                    Iaculis ultrices laoreet mauris odio ridiculus inceptos litora at. 
+                    Aenean eleifend posuere pellentesque eros pharetra facilisis pulvinar.
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

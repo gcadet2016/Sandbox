@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- Valiated on https://validator.w3.org/ -->
+    <head>
+        <title>Utiliser Javascript dans les formulaires</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="gcadet">
+        <!-- Pour les moteurs de recherche-->
+        <meta name="description" content="Utiliser Javascript dans les formulaires">
+        <meta name="keywords" content="HTML, CSS, JavaScript, exemple">
+
+        <link rel="icon" type="img/x-icon" href="../../img/icone.png">
+        <script type="text/javascript" src="10-Form-javascript.js"></script>
+        <style>
+            textarea, input[type='text'], fieldset, select {
+                display: block;
+                width: 400px;
+                margin-bottom: 0.5em;
+                box-sizing: border-box;
+            }
+            input:focus, select:focus, textarea:focus, fieldset:focus-within {
+                background-color: lightgoldenrodyellow;
+                border-color: darkblue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Nouvel article</h1>
+        <form id="new-article-form" action="#" method="POST">
+            <label for="article">Article</label>
+            <textarea id="article" name="article" rows="5" required></textarea>
+            <label for="signature">Signature</label>
+            <input type="text" name="signature" title="the title" id="signature">
+            <label for="profession">Profession</label>
+            <select name="profession" id="profession">
+                <option></option>
+                <option value="formateur">Formateur</option>
+                <option value="etudiant">Etudiant</option>
+                <option value="administrateur">Administrateur</option>
+                <option value="autre">Autre</option>
+            </select>
+            <fieldset>
+                <legend>Centres d'intérêts</legend>
+                <input type="checkbox" id="codage" name="interets" value="codage" />
+                <label for="codage">Codage</label>
+                <input type="checkbox" id="musique" name="interets" value="musique" />
+                <label for="musique">Musique</label>
+            </fieldset>
+            <input type="submit" name="Envoyer">
+        </form>
+    </body>
+
+</html>

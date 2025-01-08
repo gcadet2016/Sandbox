@@ -1,0 +1,21 @@
+header h1 {
+    border: 1px solid black;
+}
+.menu li {
+    list-style-type: none;
+}
+.nav a{
+    text-decoration: none;
+}
+
+.nav {
+    background-color: gray;
+    position: fixed;
+    width: 20%
+}
+
+.contenu {
+    width: 200px;   /* on rétrécie la largeur de la fenêtre de contenu pour avoir un scroll vertical */
+    background-color: lightgray;
+    margin-left: 25%;
+}

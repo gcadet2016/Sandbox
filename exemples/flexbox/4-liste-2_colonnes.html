@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- Valiated on https://validator.w3.org/ -->
+    <head>
+        <title>Liste sur 2 colonnes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="gcadet">
+        <!-- Pour les moteurs de recherche-->
+        <meta name="description" content="Description de la page pour les moteurs de recherche.">
+        <meta name="keywords" content="HTML, CSS, JavaScript, exemple">
+
+        <link rel="icon" type="img/x-icon" href="../img/icone.png">
+        <link rel="stylesheet" type="text/css" href="../css/default.css">
+        <link rel="stylesheet" type="text/css" href="../css/global.css">
+        <style>
+            .list {
+                display: flex;
+                flex-wrap: wrap;
+                list-style-type: none;
+                padding: 0;
+                }
+
+                .list li {
+                flex: 1 1 100%;     /* 100% = toute la largeur */
+                box-sizing: border-box;
+                padding: 10px;
+                border: 1px solid #000;
+                }
+
+                /* Pour les écrans de plus de 600px de large */
+                @media (min-width: 600px) {
+                .list li {
+                    flex: 1 1 50%; /* 50% = la moitié de la largeur ==> 2 colonnes */
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <ul class="list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+            <li>Item 8</li>
+            <li>Item 9</li>
+            <li>Item 10</li>
+            <li>Item 11</li>
+            <li>Item 12</li>
+            <li>Item 13</li>
+            <li>Item 14</li>
+            <li>Item 15</li>
+          </ul>
+          
+    </body>
+
+</html>

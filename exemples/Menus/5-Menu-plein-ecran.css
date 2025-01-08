@@ -1,0 +1,81 @@
+.main-header {
+    width: 90vw;
+    padding: 1vh 5vw;
+    background: hsl(0, 0%, 91%);
+}
+.header-content {
+    display: flex;
+    align-items: center;
+}
+#logo {
+    flex: 0 0 auto;
+}
+#slogan {
+    flex: 1 1 auto;
+    text-align: center;
+}
+/* Gestion de l'icone sprites
+    taille de l'image: 148 * 77 
+
+    Avec la technique des « sprites », on indique une position différente de l'image de fond, à droite au lieu d'être à gauche
+    la règle background-position fera apparaître l'une ou l'autre.  
+    
+    Cette technique permet donc de limiter le nombre de requêtes serveur.
+
+    */
+.ham {
+    background-image: url("../../img/sprites.jpg");
+    background-position: left top;          /* on affiche la partie gauche de l'image */
+    width: 77px;
+    height: 77px;
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+}
+
+
+.menu-plein-ecran .ham {
+    background-position: right top;         /* change l'icone car on affiche la partie droite de l'image */
+}
+
+/* menu */
+
+.menu-plein-ecran {
+    background-color: hsla(0, 0%, 91%, 0.8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.menu-plein-ecran figure {
+    padding: 2%;
+    width: 33%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.menu-plein-ecran h3 {
+    font-size: 2em;
+    margin-bottom: 0.2em;
+}
+.menu-plein-ecran:target {
+    display: block;
+}
+
+.main-menu {
+    display: inline-block;
+    vertical-align: middle;
+}
+.item > a {
+    color: #00796b;
+    text-decoration: none;
+    display: block;
+    padding: 0.3em;
+    font-size: 1.5em;
+}
+.item a:hover {
+    color: #f44336;
+    text-decoration: underline;
+}

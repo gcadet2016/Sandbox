@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation RotateY</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">Passe la souris ici</div>
+    <p><a href="https://www.w3schools.com/css/css3_3dtransforms.asp#gsc.tab=0">Voir aussi</a></p>
+    <script>
+        document.getElementById('box').addEventListener('mouseover', function() {
+            this.style.transform = 'rotateY(360deg)';
+        });
+
+        document.getElementById('box').addEventListener('mouseout', function() {
+            this.style.transform = 'rotateY(0deg)';
+        });
+    </script>
+</body>
+</html>

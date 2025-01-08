@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <title>Titre de la page</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="img/x-icon" href="../img/icone.png"/>
+        <!-- balises meta à compléter -->
+        <meta name="author" content="gcadet"/>
+        <link rel="stylesheet" type="text/css" href="../css/default.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/global.css"/>
+        <style>
+            #wrapper{
+                margin: 25px auto;
+                width: 650px;
+                background-color: #fff;
+                padding: 15px;
+                border: 1px solid #d5f;
+            }
+            form {
+                padding:20px;
+                background-color: #91B6C0;
+            }
+            form p{
+                margin: 1em 0;
+            }
+            input, textarea, label {
+                display: inline-block;
+                vertical-align: top;
+            }
+            label{
+                width: 100px;
+                margin-right: 20px;
+                font-size: 1em;
+                text-align: right;
+            }
+            input, textarea {
+                width: 150px;
+                padding: 4px;
+                background: #f2f2f2;
+                border: 1px solid #ddd;
+            }
+            #sujet {
+                width: 250px;
+            }
+            #message {
+                width: 430px;
+                height: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div id="formulaire" class="exemple">
+                <form>
+                    <p>
+                        <label for="nom">Nom</label>
+                        <input id="nom" type="text">
+                    </p>
+                    <p>
+                        <label for="email">Email</label>
+                        <input id="email" type="email">
+                    </p>
+                    <p>
+                        <label for="sujet">Sujet</label>
+                        <input id="sujet" type="text">
+                    </p>
+                    <p>
+                        <label for="message">Message</label>
+                        <textarea id="message"></textarea>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div>
+            <footer></footer>
+        </div>
+    </body>
+
+</html>

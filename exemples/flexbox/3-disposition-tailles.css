@@ -1,0 +1,117 @@
+/* container */
+.flex-container-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 50vh;
+    border: 1px solid red;
+    padding: 20px;
+}
+
+.flex-container-2 {
+    display: flex;
+    flex-flow: row nowrap;      
+    justify-content: space-between;
+    align-items: baseline;
+    height: 50vh;
+    border: 1px solid red;
+    padding: 20px;
+}
+.flex-container-3 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 50vh;
+    border: 1px solid red;
+    padding: 20px;
+}
+.flex-container-4 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 50vh;
+    border: 1px solid red;
+    padding: 20px;
+}
+.flex-container-5 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 50vh;
+    border: 1px solid red;
+    padding: 20px;
+}
+.flex-container-6 {
+    display: flex;
+    flex-flow: row nowrap;      
+    justify-content: end;            /* les items sont callés à partir de la droite */
+    align-items: center;             /* aligne horizontalement les items, au centre du block */
+    height: 50vh;
+    border: 1px solid red;
+    padding: 20px;
+}
+.flex-container-7 {
+    display: flex;
+    flex-flow: row nowrap;      
+    justify-content: start;            /* les items sont callés à partir de la droite */
+    border: 1px solid red;
+    padding: 20px;
+}
+/* items */
+.flex-item {
+    list-style-type: none;
+    border: 1px solid #625b48;
+    background-color: #ae8964;
+    padding: 5px 15px;
+}
+.flex-item:hover {
+    color: #ae8964;
+    background-color: #e1ce9a;
+}
+.big {
+    padding: 8px 20px;
+    height: 25px;
+}
+.bigger {
+    padding: 32px 24px;
+    height: 50px;
+}
+.big2 {
+    padding: 8px 20px;
+    height: 25px;
+    align-self: flex-start;
+}
+.bigger2 {
+    padding: 32px 24px;
+    height: 50px;
+    align-self: center;
+}
+.big3 {
+    padding: 8px 20px;
+    height: 25px;
+    align-self: stretch;
+}
+.bigger3 {
+    padding: 32px 24px;
+    height: 50px;
+    align-self: center;
+}
+/* texte dans les items */ 
+.flex-item a, .item a {
+    border: 1px solid #ceb46d;
+    text-decoration: none;
+    color: #e1ce9a;
+    background-color: #4c341b;
+}
+.square {
+    list-style-type: none;
+    background-color: #ae8964;
+    padding-left: 2em;
+}
+.square a {
+    text-decoration: none;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head> <!-- MetaData -->
+        <meta charset="UTF-8">
+        <title>Min et max</title>
+        <link rel="icon" type="img/x-icon" href="../img/icone.png"/>
+        <!-- balises meta à compléter -->
+        <meta name="author" content="gcadet"/>
+        <link rel="stylesheet" type="text/css" href="../css/default.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/global.css"/>
+        <style>
+            /* width: 50% du body*/
+            .main{width: 50%;}
+            .rouge{ background-color: red;}
+            .vert{ background-color: green;}
+            .jaune{ background-color: yellow;}
+            .contenu{ min-width: 400px; max-width: 700px;}
+            .bordure{border: 5px solid black;}
+            .padding{padding: 10px;}
+            .box{ box-sizing: border-box;}
+            .hauteur{height: 15vh; min-height: 100px; max-height: 125px;}
+        </style>
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="contenu rouge">Voici un exemple de min et max</div>
+            <div class="contenu vert">Voici un exemple de min et max</div>
+            <div class="contenu jaune">Voici un exemple de min et max</div>
+        </div>
+        <div class="main">
+            <div class="contenu bordure padding">Voici un exemple de min et max avec border et padding. <br/>
+                Ca déborde car on est en box-sizing: content-box</div>
+            <div class="contenu bordure padding box">Ca déborde car on est en box-sizing: content-box</div>
+        </div>
+        <div class="main">
+            <div class="contenu rouge hauteur">Voici un exemple de min et max</div>
+            <div class="contenu vert hauteur">Voici un exemple de min et max</div>
+            <div class="contenu jaune hauteur">Voici un exemple de min et max</div>
+        </div>
+    </body>
+
+</html>

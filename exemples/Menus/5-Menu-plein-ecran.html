@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <title>Menu plein écran</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="img/x-icon" href="../../img/icone.png">
+        <!-- balises meta à compléter -->
+        <meta name="author" content="gcadet">
+        <link rel="stylesheet" type="text/css" href="5-Menu-plein-ecran.css">
+    </head>
+
+    <body>
+        <header id="top" class="main-header">
+            <div class="header-content">
+                <div id="logo" class="fl">
+                    <img src="../../img/yo.png" width="140px" alt="logo">
+                </div>
+                <div id="slogan" class="fl">
+                    <h1>Most def'</h1>
+                </div>
+            </div>
+            <div id="button-menu">
+                <a href="#main-nav">
+                    <span class="ham"></span>
+                </a>
+            </div>
+
+            <!-- Lorsqu'on navigue vers l'ID #main-nav (ci-dessus <a href="#main-nav">) la pseudo classe "target" est activée.
+                Dans le fichier .css on a 
+                    .menu-plein-ecran:target {
+                        display: block;
+                    }
+                Ca exécute le css ==> ca affiche le menu 
+                Ensuite quand on click sur la croix on navigue vers l'ID #top  ==> la pseudo classe n'est plus active, donc on a "display: None"
+            -->
+            <nav class="menu-plein-ecran" id="main-nav">
+                <div id="button-menu">
+                    <a href="#top">
+                        <span class="ham"></span>
+                    </a>
+                </div>
+                <div class="content-menu">
+                    <figure>
+                        <img src="../../img/RT2.jpg">
+                    </figure>
+                    <div class="main-menu">
+                        <h3>Les ratons laveurs</h3>
+                        <ul class="item-menu">
+                            <li class="item"><a href="#">Item 1</a></li>
+                            <li class="item"><a href="#">Item 2</a></li>
+                            <li class="item"><a href="#">Item 3</a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </nav>
+        </header>
+    </body>
+
+</html>

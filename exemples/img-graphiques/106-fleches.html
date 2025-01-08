@@ -1,0 +1,184 @@
+<!-- Sources https://www.creativosonline.org/fr/fl%C3%A8ches-anim%C3%A9es-en-css.html 
+            clip-path: https://www.zendevs.xyz/comment-faire-des-triangles-css-et-des-fleches-css/
+-->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head> <!-- MetaData -->
+    <meta charset="UTF-8">
+    <title>Flèches</title>
+    <link rel="icon" type="img/x-icon" href="../img/icone.png" />
+    <!-- balises meta à compléter -->
+    <meta name="author" content="gcadet" />
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../css/global.css" />
+    <style>
+        /* Pretty Stuff? */
+        html {
+            background: #011F2A;
+        }
+
+        .things>.content {
+            float: left;
+            width: 50%;
+            height: 500px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .things>.content h1 {
+            font-family: 'Arial', sans-serif;
+            text-transform: uppercase;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+            height: 150px;
+            color: #89323B;
+        }
+
+        /* Arrow */
+
+        .arrow {
+            position: relative;
+            margin: 0 auto;
+            width: 100px;
+        }
+
+        .arrow .curve {
+            border: 2px solid #BE5F4B;
+            border-color: transparent transparent transparent #BE5F4B;
+            height: 360px;
+            width: 1200px;
+            border-radius: 230px 0 0 150px;
+        }
+
+        .arrow .point {
+            position: absolute;
+            left: 40px;
+            top: 315px;
+        }
+
+        .arrow .point:before,
+        .arrow .point:after {
+            border: 1px solid #BE5F4B;
+            height: 25px;
+            content: "";
+            position: absolute;
+        }
+
+        .arrow .point:before {
+            top: -11px;
+            left: -11px;
+            transform: rotate(-74deg);
+            -webkit-transform: rotate(-74deg);
+            -moz-transform: rotate(-74deg);
+            -ms-transform: rotate(-74deg);
+        }
+
+        .arrow .point:after {
+            top: -20px;
+            left: 5px;
+            transform: rotate(12deg);
+            -webkit-transform: rotate(12deg);
+            -moz-transform: rotate(12deg);
+            -ms-transform: rotate(12deg);
+        }
+
+        /* ------------------------------------------------------------------------------ */
+        .arrow-up {
+            width: 32px;
+            height: 20px;
+            background-color: #8888e8;
+
+            clip-path: polygon(50% 0, 0 100%, 100% 100%);
+        }
+
+        .arrow-right {
+            width: 20px;
+            height: 32px;
+            background-color: #e888a3;
+
+            clip-path: polygon(0 0, 0 100%, 100% 50%);
+        }
+
+        .arrow-down {
+            width: 32px;
+            height: 20px;
+            background-color: #f7df6c;
+
+            clip-path: polygon(100% 0, 0 0, 50% 100%);
+        }
+
+        .arrow-left {
+            width: 20px;
+            height: 32px;
+            background-color: #8de698;
+
+            clip-path: polygon(100% 100%, 100% 0, 0 50%);
+        }
+
+        body {
+            padding: 50px 30px;
+        }
+
+        .arrow-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0 0;
+
+            >* {
+                margin: 0 20px;
+            }
+        }
+
+        .title {
+            text-transform: uppercase;
+            font-size: 1rem;
+            color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-weight: 400;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="things">
+        <div class="content">
+            <div class="arrow">
+                <div class="curve"></div>
+                <div class="point"></div>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Curved Arrow</h1>
+        </div>
+    </div>
+    <div>
+        <p>&#8679;</p>
+    </div>
+    <h2 class="title">Les 4 Directions des flèches</h2>
+
+    <div class="arrow-wrapper">
+        <div class="arrow-up"></div>
+        <div class="arrow-right"></div>
+        <div class="arrow-down"></div>
+        <div class="arrow-left"></div>
+    </div>
+    <div>
+        <h2>SVG polygon Element</h2>
+
+        <svg height="220" width="500" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="100,10 110,30 105,30 105,60 95,60 95,30 90,30" style="fill:lime;stroke:purple;stroke-width:1" />
+          Sorry, your browser does not support inline SVG.
+        </svg>
+    </div>
+</body>
+
+</html>

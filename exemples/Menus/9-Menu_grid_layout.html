@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr" id="home">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page avec Menu Fixe</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            height: 100vh;
+        }
+        header {
+            grid-row: 1;
+            width: 100%;
+            background-color: #666e0c;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        main {
+            grid-row: 2;
+            padding-top: 60px; /* Hauteur du header */
+            padding: 20px;
+        }
+        main section {
+            margin-top: 60px;
+        }
+        .etroit {
+            width:10vw;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Accueil</a>
+            <a href="#about">À propos</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Bienvenue sur notre site</h1>
+            <p>Ceci est un exemple d'articles situés en dessous du header fixe et rétractable. <br/>
+                Tester le menu pour naviguer vers le haut ou vers le bas.<br/>
+                <br/>
+                Dans cet exemple, le JavaScript écoute l'événement de défilement et ajuste la position du header en fonction de 
+                la direction du défilement. <br/>
+                Lorsque vous faites défiler vers le bas, le header se rétracte vers le haut. <br/>
+                Lorsque vous faites défiler vers le haut, le header réapparaît. <br/>
+                Vous pouvez ajuster la valeur de -60px en fonction de la hauteur réelle de votre header. <br/>
+                Si vous avez d'autres questions ou besoin d'aide supplémentaire, n'hésitez pas à demander.<br/>
+            </p>
+            <article id="about">
+                <h2>About - malheureusement le titre se retrouve caché derrière le header.</h2>
+                <p class="etroit">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua. Nunc sed augue lacus viverra vitae congue eu. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. 
+                Faucibus ornare suspendisse sed nisi. Massa id neque aliquam vestibulum morbi blandit cursus. Laoreet sit amet cursus sit. 
+                Convallis aenean et tortor at risus viverra adipiscing at in. Cursus eget nunc scelerisque viverra mauris in aliquam sem 
+                fringilla. Pharetra vel turpis nunc eget lorem dolor sed viverra. Turpis tincidunt id aliquet risus feugiat in ante metus 
+                dictum. Auctor augue mauris augue neque. Id aliquet lectus proin nibh nisl condimentum id. Elementum facilisis leo vel 
+                fringilla est. Consequat ac felis donec et odio pellentesque. Diam ut venenatis tellus in metus vulputate. Netus et 
+                malesuada fames ac turpis egestas sed tempus urna. Elementum integer enim neque volutpat ac tincidunt vitae. Purus 
+                viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Et egestas quis ipsum suspendisse ultrices.
+                </p>
+            </article>
+            <article id="services">
+                <h2>Services</h2>
+                <p>Pharetra vel turpis nunc eget lorem dolor sed viverra. Turpis tincidunt id aliquet risus feugiat in ante metus 
+                    dictum. Auctor augue mauris augue neque. Id aliquet lectus proin nibh nisl condimentum id. Elementum facilisis leo vel 
+                    fringilla est. Consequat ac felis donec et odio pellentesque. Diam ut venenatis tellus in metus vulputate. Netus et 
+                    malesuada fames ac turpis egestas sed tempus urna. Elementum integer enim neque volutpat ac tincidunt vitae. Purus 
+                    viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Et egestas quis ipsum suspendisse ultrices.
+                </p>
+            </article>
+            <article id="contact">
+                <h2>Contact</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                    aliqua. Nunc sed augue lacus viverra vitae congue eu. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. 
+                    Faucibus ornare suspendisse sed nisi. Massa id neque aliquam vestibulum morbi blandit cursus. Laoreet sit amet cursus sit. 
+                    Convallis aenean et tortor at risus viverra adipiscing at in. Cursus eget nunc scelerisque viverra mauris in aliquam sem 
+                    fringilla. Pharetra vel turpis nunc eget lorem dolor sed viverra. Turpis tincidunt id aliquet risus feugiat in ante metus 
+                    dictum. Auctor augue mauris augue neque. Id aliquet lectus proin nibh nisl condimentum id. Elementum facilisis leo vel 
+                    fringilla est. Consequat ac felis donec et odio pellentesque. Diam ut venenatis tellus in metus vulputate. Netus et 
+                    malesuada fames ac turpis egestas sed tempus urna. Elementum integer enim neque volutpat ac tincidunt vitae. Purus 
+                    viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Et egestas quis ipsum suspendisse ultrices.
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

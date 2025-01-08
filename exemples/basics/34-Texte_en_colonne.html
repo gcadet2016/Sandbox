@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head> <!-- MetaData -->
+    <meta charset="UTF-8">
+    <title>Titre de la page</title>
+    <link rel="icon" type="img/x-icon" href="../img/icone.png" />
+    <!-- balises meta à compléter -->
+    <meta name="author" content="gcadet" />
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../css/global.css" />
+    <style>
+        .colonne{
+            column-count: 3;
+            /* column-width: 200px; /* dés que le système peut créer une colonne de 200px, il le fait */
+            /*columns: 200px 3;   /* même chose mais 3 colonnes maximum */
+            column-gap: 50px;       /* espace entre les colonnes */
+            /* column-rule : trait de séparation entre les colonnes 
+            column-rule-color: red;
+            column-rule-style: solid;
+            column-rule-width: 5px; */
+            column-rule: red solid 5px; /* propriété raccourci */
+        }
+        .colonneSpan { column-span: all;}
+    </style>
+</head>
+
+<body>
+    <div class="colonne">
+        <p style="background-color: yellow;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p style="background-color: aquamarine;" class="colonneSpan">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </p>
+        <p style="background-color: darkgoldenrod;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+.flex-container-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    border: 1px solid red;
+}
+
+.flex-container-2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    border: 1px solid red;
+}
+.flex-container-3 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 50vh;
+    border: 1px solid red;
+}
+.flex-container-4 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    height: 50vh;
+    border: 1px solid red;
+}
+
+.flex-item, .item {
+    list-style-type: none;
+}
+.flex-item a, .item a {
+    display: block;
+    border: 1px solid #625b48;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #e1ce9a;
+    text-align: center;
+    background-color: #ae8964;
+}
+.flex-item a:hover, .item a:hover {
+    color: #ae8964;
+    background-color: #e1ce9a;
+}
+
+

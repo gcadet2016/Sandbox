@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head> <!-- MetaData -->
+        <meta charset="UTF-8">
+        <title>Solar pabel canvas</title>
+        <link rel="icon" type="img/x-icon" href="../img/icone.png"/>
+        <!-- balises meta à compléter -->
+        <meta name="author" content="gcadet"/>
+        <link rel="stylesheet" type="text/css" href="../css/default.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/global.css"/>
+        <style>
+            #cvRot {
+                rotate: 0deg;
+                /* position: absolute;
+                top: 40px;
+                left: 60px; */
+                /*border-style:dashed;
+                border-width: 1px;*/
+            }
+            #cvIncli {
+                rotate: 0deg;
+                /* position: absolute;
+                top: 40px;
+                left: 60px; */
+                /*border-style:dashed;
+                border-width: 1px;*/
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>
+            canvas
+        </h1>
+        <canvas id="cvRot" width="200" height="200"></canvas>
+        <canvas id="cvIncli" width="200" height="200"></canvas>
+        <div>
+            <input type="range" id="rAngle" name="rAngle" min="-160" max="160" value="0" step="5" />
+            <label for="rAngle">Orientation</label>
+        </div>
+        <div>
+            <input type="range" id="rIncli" name="rIncli" min="20" max="75" value="45" step="5" />
+            <label for="rIncli">Inclinaison</label>
+        </div>
+        <p>Value rAngle: <output id="valueAngle"></output></p>
+        <p>Value rIncli: <output id="valueIncli"></output></p>
+    </body>
+    <script>
+        // Canvas 1: size= 200x200  => canvas center is at 100,100
+        const canvasRot = document.getElementById('cvRot');
+        const ctxR = canvasRot.getContext('2d');
+        //const w = canvasRot.width;
+        //const h = canvasRot.height;
+
+        ctxR.fillStyle = "DarkGray";
+        ctxR.fillRect(70, 70, 60, 60);
+        ctxR.fillStyle = "BurlyWood";
+        ctxR.fillRect(85, 70, 10, 10);
+
+        const img = new Image();
+        img.src = "../img/photoVolt.png";
+        img.onload = () => {
+            const pat = ctxR.createPattern(img, "repeat");
+            ctxR.rect(40, 80, 120, 46);
+            ctxR.fillStyle = pat;
+            ctxR.fill();
+        }
+
+        // Input Range
+        //const canvas = document.getElementById('myCanvas');  déjà dans le code ci-dessus
+        const valueAngle = document.querySelector("#valueAngle");
+        const rangeAngle = document.querySelector("#rAngle");
+        rangeAngle.addEventListener("input", (event) => {
+            valueAngle.textContent = event.target.value;
+            canvasRot.style.rotate = `${event.target.value}deg`;
+        });
+
+        // Canvas 2: size= 200x200  => canvas center is at 100,100
+        const canvasIncli = document.getElementById('cvIncli');
+        const ctxI = canvasIncli.getContext('2d');
+
+        ctxI.beginPath();
+        ctxI.moveTo(50, 100);
+        ctxI.lineTo(50, 20);
+        ctxI.lineWidth = 10;
+        ctxI.strokeStyle = "black";
+        ctxI.stroke();
+
+        ctxI.beginPath();
+        //ctx.lineCap = "round";
+        ctxI.moveTo(50,115);
+        ctxI.lineTo(140,115);
+        ctxI.strokeStyle = "DarkGray";
+        ctxI.stroke();
+
+        // const img2 = new Image();
+        // img2.src = "../img/photoVolt.png";
+        // img2.onload = () => {
+        //     const pat = ctxI.createPattern(img2, "repeat");
+        //     ctxI.rect(40, 80, 120, 46);
+        //     ctxI.fillStyle = pat;
+        //     ctxI.fill();
+        // }
+        // Input Range
+        //const canvas = document.getElementById('myCanvas');  déjà dans le code ci-dessus
+        const valueIncli = document.querySelector("#valueIncli");
+        const rangeIncli = document.querySelector("#rIncli");
+        rangeIncli.addEventListener("input", (event) => {
+            valueIncli.textContent = event.target.value;
+            //canvasIncli.style.rotate = `${event.target.value}deg`;
+            ctxI.clearRect(40,110,110,-110);
+            ctxI.beginPath();
+            ctxI.strokeStyle = "black";
+            ctxI.moveTo(50, 100);
+            ctxI.lineTo(50 + Math.cos(event.target.value * Math.PI / 180)*80, 100 - Math.sin(event.target.value * Math.PI / 180)*80);
+
+            ctxI.moveTo(130, 100);
+            ctxI.lineTo(50 + Math.cos(event.target.value * Math.PI / 180)*70, 100 - Math.sin(event.target.value * Math.PI / 180)*70);
+            ctxI.lineWidth = 10;
+            
+            //ctx.lineCap = "round";
+            
+            ctxI.stroke();
+        });
+    </script>
+</html>

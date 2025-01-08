@@ -9,18 +9,45 @@
         <meta name="author" content="gcadet"/>
         <link rel="stylesheet" type="text/css" href="css/default.css"/>
         <link rel="stylesheet" type="text/css" href="css/global.css"/>
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        <script type="text/javascript" src="js/index.js"></script>
     </head>
 
     <body>
-        <div class="menu">
-            <a href="ateliers/"><div class="nav">Ateliers</div></a><!--
-            --><a href="exemples/"><div class="nav">Exemples</div></a><!--
-            --><a href="documents/"><div class="nav">Documents</div></a><!--
-            --><a href="img/"><div class="nav">img</div></a><!--
-            --><a href="css/"><div class="nav">css</div></a><!--
-            --><a href="js/"><div class="nav">js</div></a>
+        <nav class="main-menu">
+            <li>
+                <a href="#">Position</a>
+                <ul class="sous-menu">
+                    <li><a href="#" onclick="loadSource('exemples/background/1-linear-gradient.html')">Linear gradient</a></li>
+                    <li><a href="#">Sous-menu 1</a></li>
+                    <li><a href="#">Sous-menu 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Menus</a>
+                <ul class="sous-menu">
+                    <li><a href="#">Sous-menu 2</a></li>
+                    <li><a href="#">Sous-menu 2 </a></li>
+                    <li><a href="#">Sous-menu 2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Menu-3</a>
+            </li>
+        </nav>
+        <div class="title">
+            <h1>File name</h1>
+            <p>On ne peut pas charger le code source d'un fichier html: erreur CORS. 
+                Seule solution: faire tourner ce code dans un serveur web, ou dupliquer le code dans des fichiers text (ben en faite non)</p>
         </div>
-        Bienvenue dans ma sandbox
+        <div class="codeblock">
+            <h2>Code source</h2>
+            <iframe class="sourceFrame"></iframe>
+        </div>
+        <div class="rendublock">
+            <h2>Rendu</h2>
+            <iframe src="exemples/background/1-linear-gradient.html"></iframe>
+        </div>
     </body>
 
 </html>

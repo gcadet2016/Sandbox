@@ -1,0 +1,52 @@
+body{
+    background-color: black;
+    display: flex;
+}
+.containe{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+.btn-dyn{
+    width: 120px;
+    height: 50px;
+    background-color: #9472d6;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-style: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-dyn:hover{
+    color: #9472d6;
+
+}
+
+.btn-dyn::after{
+    content:"";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -15%;
+    right: -15%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0,1);
+    transition: all 0.5s;;
+}
+
+.btn-dyn:hover::after{
+    transform: skewX(-45deg) scale(1,1);
+    transition: all 0.5s;
+}
+
+.btn-dyn:active{
+    transform: translateY(2px);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.60);
+    color: black;
+}
